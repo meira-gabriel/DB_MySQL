@@ -61,3 +61,8 @@ CREATE TABLE dependents (
 	employee_id INT (11) NOT NULL,
 	FOREIGN KEY (employee_id) REFERENCES employees (employee_id) ON DELETE CASCADE ON UPDATE CASCADE
 );
+
+
+/*utilização de INNER JOIN*/
+
+SELECT first_name, last_name, job_title, department_name FROM employees INNER JOIN jobs on employees.job_id = jobs.job_id INNER JOIN departments on employees.department_id = departments.department_id;
